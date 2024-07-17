@@ -1,0 +1,10 @@
+{
+  "redBookApp": {
+    "CstStatus": {
+      "null": "",
+      "ENABLED": "启用",
+      "DISABLED": "停用",
+      "LOCKED": "锁定"
+    }
+  }
+}

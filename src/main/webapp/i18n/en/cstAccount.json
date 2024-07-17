@@ -1,0 +1,44 @@
+{
+  "redBookApp": {
+    "cstAccount": {
+      "home": {
+        "title": "Cst Accounts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cst Account",
+        "createOrEditLabel": "Create or edit a Cst Account",
+        "notFound": "No Cst Accounts found"
+      },
+      "created": "A new Cst Account is created with identifier {{ param }}",
+      "updated": "A Cst Account is updated with identifier {{ param }}",
+      "deleted": "A Cst Account is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cst Account {{ id }}?"
+      },
+      "detail": {
+        "title": "Cst Account"
+      },
+      "id": "ID",
+      "name": "Name",
+      "provider": "Provider",
+      "rbAccount": "Rb Account",
+      "rbPwd": "Rb Pwd",
+      "rbToken": "Rb Token",
+      "status": "Status",
+      "timesByDay": "Times By Day",
+      "createdDate": "Created Date",
+      "channel": "Channel",
+      "customer": "Customer",
+      "help": {
+        "name": "名称",
+        "provider": "账号提供方",
+        "rbAccount": "账号",
+        "rbPwd": "密码",
+        "rbToken": "token",
+        "status": "状态",
+        "timesByDay": "当天使用次数",
+        "createdDate": "添加时间",
+        "channel": "客户类型"
+      }
+    }
+  }
+}

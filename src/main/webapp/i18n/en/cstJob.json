@@ -1,0 +1,41 @@
+{
+  "redBookApp": {
+    "cstJob": {
+      "home": {
+        "title": "Cst Jobs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cst Job",
+        "createOrEditLabel": "Create or edit a Cst Job",
+        "notFound": "No Cst Jobs found"
+      },
+      "created": "A new Cst Job is created with identifier {{ param }}",
+      "updated": "A Cst Job is updated with identifier {{ param }}",
+      "deleted": "A Cst Job is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cst Job {{ id }}?"
+      },
+      "detail": {
+        "title": "Cst Job"
+      },
+      "id": "ID",
+      "name": "Name",
+      "executeType": "Execute Type",
+      "category": "Category",
+      "status": "Status",
+      "createdDate": "Created Date",
+      "jobProps": "Job Props",
+      "channel": "Channel",
+      "jobResult": "Job Result",
+      "customer": "Customer",
+      "help": {
+        "name": "任务名称",
+        "executeType": "执行方式",
+        "category": "任务类型",
+        "status": "状态状态",
+        "createdDate": "添加时间",
+        "jobProps": "任务业务参数",
+        "channel": "客户渠道"
+      }
+    }
+  }
+}

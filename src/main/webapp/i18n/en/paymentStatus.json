@@ -1,0 +1,10 @@
+{
+  "redBookApp": {
+    "PaymentStatus": {
+      "null": "",
+      "WAIT": "WAIT",
+      "PAYING": "PAYING",
+      "COMPLETE": "COMPLETE"
+    }
+  }
+}

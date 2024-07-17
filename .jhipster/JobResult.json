@@ -1,0 +1,146 @@
+{
+  "annotations": {
+    "changelogDate": "20240717161318"
+  },
+  "applications": ["RedBook"],
+  "documentation": "小红书任务强果",
+  "fields": [
+    {
+      "documentation": "任务名称",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "任务url",
+      "fieldName": "jobUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "任务作者名称",
+      "fieldName": "authorName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "账户Id",
+      "fieldName": "accountId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "账户Id",
+      "fieldName": "customerId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "任务状态",
+      "fieldName": "status",
+      "fieldType": "JobStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "OVER (结束了),READY (准备好了),ERROR (异常)"
+    },
+    {
+      "documentation": "任务日期",
+      "fieldName": "jobDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "任务编号",
+      "fieldName": "jobNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "生成时间时间",
+      "fieldName": "builderDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "回复内容",
+      "fieldName": "replay",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "回复主题",
+      "fieldName": "replayTheme",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "回复结果截图",
+      "fieldName": "replayImage",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "documentation": "回复时间",
+      "fieldName": "replayDate",
+      "fieldType": "Instant"
+    },
+    {
+      "documentation": "有效的回复",
+      "fieldName": "effReplay",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "是否结算",
+      "fieldName": "settlement",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "结算订单号",
+      "fieldName": "settlementOrder",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "结算时间",
+      "fieldName": "settlementDate",
+      "fieldType": "Instant"
+    },
+    {
+      "documentation": "异常描述",
+      "fieldName": "errorMsg",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "异常截图",
+      "fieldName": "errorImage",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "documentation": "客户渠道",
+      "fieldName": "channel",
+      "fieldType": "ChannelCate",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SmallRedBook (小红书),ByteDance (抖音),MeiTuan (美团)"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "JobResult",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "cstJob",
+      "otherEntityRelationshipName": "jobResult",
+      "relationshipName": "cstJob",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "jobOrder",
+      "otherEntityRelationshipName": "jobResult",
+      "relationshipName": "jobOrder",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

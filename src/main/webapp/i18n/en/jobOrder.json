@@ -1,0 +1,40 @@
+{
+  "redBookApp": {
+    "jobOrder": {
+      "home": {
+        "title": "Job Orders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Job Order",
+        "createOrEditLabel": "Create or edit a Job Order",
+        "notFound": "No Job Orders found"
+      },
+      "created": "A new Job Order is created with identifier {{ param }}",
+      "updated": "A Job Order is updated with identifier {{ param }}",
+      "deleted": "A Job Order is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Job Order {{ id }}?"
+      },
+      "detail": {
+        "title": "Job Order"
+      },
+      "id": "ID",
+      "settlementOrderNo": "Settlement Order No",
+      "amount": "Amount",
+      "paymentStatus": "Payment Status",
+      "settlementDate": "Settlement Date",
+      "paymentDate": "Payment Date",
+      "customerId": "Customer Id",
+      "channel": "Channel",
+      "jobResult": "Job Result",
+      "help": {
+        "settlementOrderNo": "任务名称",
+        "amount": "总金额",
+        "paymentStatus": "任务状态",
+        "settlementDate": "结算时间",
+        "paymentDate": "支付时间",
+        "customerId": "客户Id",
+        "channel": "客户渠道"
+      }
+    }
+  }
+}

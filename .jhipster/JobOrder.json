@@ -1,0 +1,66 @@
+{
+  "annotations": {
+    "changelogDate": "20240717161418"
+  },
+  "applications": ["RedBook"],
+  "documentation": "小红书任务强求果",
+  "fields": [
+    {
+      "documentation": "任务名称",
+      "fieldName": "settlementOrderNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "总金额",
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "任务状态",
+      "fieldName": "paymentStatus",
+      "fieldType": "PaymentStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "WAIT,PAYING,COMPLETE"
+    },
+    {
+      "documentation": "结算时间",
+      "fieldName": "settlementDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "支付时间",
+      "fieldName": "paymentDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "客户Id",
+      "fieldName": "customerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "客户渠道",
+      "fieldName": "channel",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "JobOrder",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "jobResult",
+      "otherEntityRelationshipName": "jobOrder",
+      "relationshipName": "jobResult",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

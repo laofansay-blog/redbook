@@ -1,0 +1,67 @@
+{
+  "redBookApp": {
+    "jobResult": {
+      "home": {
+        "title": "Job Results",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Job Result",
+        "createOrEditLabel": "Create or edit a Job Result",
+        "notFound": "No Job Results found"
+      },
+      "created": "A new Job Result is created with identifier {{ param }}",
+      "updated": "A Job Result is updated with identifier {{ param }}",
+      "deleted": "A Job Result is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Job Result {{ id }}?"
+      },
+      "detail": {
+        "title": "Job Result"
+      },
+      "id": "ID",
+      "name": "Name",
+      "jobUrl": "Job Url",
+      "authorName": "Author Name",
+      "accountId": "Account Id",
+      "customerId": "Customer Id",
+      "status": "Status",
+      "jobDate": "Job Date",
+      "jobNo": "Job No",
+      "builderDate": "Builder Date",
+      "replay": "Replay",
+      "replayTheme": "Replay Theme",
+      "replayImage": "Replay Image",
+      "replayDate": "Replay Date",
+      "effReplay": "Eff Replay",
+      "settlement": "Settlement",
+      "settlementOrder": "Settlement Order",
+      "settlementDate": "Settlement Date",
+      "errorMsg": "Error Msg",
+      "errorImage": "Error Image",
+      "channel": "Channel",
+      "cstJob": "Cst Job",
+      "jobOrder": "Job Order",
+      "help": {
+        "name": "任务名称",
+        "jobUrl": "任务url",
+        "authorName": "任务作者名称",
+        "accountId": "账户Id",
+        "customerId": "账户Id",
+        "status": "任务状态",
+        "jobDate": "任务日期",
+        "jobNo": "任务编号",
+        "builderDate": "生成时间时间",
+        "replay": "回复内容",
+        "replayTheme": "回复主题",
+        "replayImage": "回复结果截图",
+        "replayDate": "回复时间",
+        "effReplay": "有效的回复",
+        "settlement": "是否结算",
+        "settlementOrder": "结算订单号",
+        "settlementDate": "结算时间",
+        "errorMsg": "异常描述",
+        "errorImage": "异常截图",
+        "channel": "客户渠道"
+      }
+    }
+  }
+}

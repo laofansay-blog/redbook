@@ -1,0 +1,76 @@
+{
+  "annotations": {
+    "changelogDate": "20240717161118"
+  },
+  "applications": ["RedBook"],
+  "documentation": "小红书用户",
+  "fields": [
+    {
+      "documentation": "名称",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "账号提供方",
+      "fieldName": "provider",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "账号",
+      "fieldName": "rbAccount",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "密码",
+      "fieldName": "rbPwd",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "token",
+      "fieldName": "rbToken",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "状态",
+      "fieldName": "status",
+      "fieldType": "CstStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ENABLED (启用),DISABLED (停用),LOCKED (锁定)"
+    },
+    {
+      "documentation": "当天使用次数",
+      "fieldName": "timesByDay",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "添加时间",
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "documentation": "客户类型",
+      "fieldName": "channel",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "CstAccount",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "cstAccount",
+      "relationshipName": "customer",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

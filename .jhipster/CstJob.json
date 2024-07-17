@@ -1,0 +1,74 @@
+{
+  "annotations": {
+    "changelogDate": "20240717161218"
+  },
+  "applications": ["RedBook"],
+  "documentation": "小红书任务",
+  "fields": [
+    {
+      "documentation": "任务名称",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "执行方式",
+      "fieldName": "executeType",
+      "fieldType": "ExecuteType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ONCE (行行一次),DAY (每次天执行)"
+    },
+    {
+      "documentation": "任务类型",
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "状态状态",
+      "fieldName": "status",
+      "fieldType": "JobStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "OVER (结束了),READY (准备好了),ERROR (异常)"
+    },
+    {
+      "documentation": "添加时间",
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "任务业务参数",
+      "fieldName": "jobProps",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "客户渠道",
+      "fieldName": "channel",
+      "fieldType": "ChannelCate",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SmallRedBook (小红书),ByteDance (抖音),MeiTuan (美团)"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "CstJob",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "jobResult",
+      "otherEntityRelationshipName": "cstJob",
+      "relationshipName": "jobResult",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "cstJob",
+      "relationshipName": "customer",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

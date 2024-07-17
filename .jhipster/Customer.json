@@ -1,0 +1,82 @@
+{
+  "annotations": {
+    "changelogDate": "20240717161018"
+  },
+  "applications": ["RedBook"],
+  "documentation": "客户",
+  "fields": [
+    {
+      "documentation": "客户名称",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "客户手机号",
+      "fieldName": "mobile",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "客户邮箱",
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "客户介绍",
+      "fieldName": "introduce",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "账户余额",
+      "fieldName": "balance",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "可用次数",
+      "fieldName": "times",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "状态",
+      "fieldName": "status",
+      "fieldType": "CstStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ENABLED (启用),DISABLED (停用),LOCKED (锁定)"
+    },
+    {
+      "documentation": "添加时间",
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Customer",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "cstAccount",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "cstAccount",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cstJob",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "cstJob",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "channels",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "channels",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

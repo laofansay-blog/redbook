@@ -1,0 +1,52 @@
+{
+  "annotations": {
+    "changelogDate": "20240717160918"
+  },
+  "applications": ["RedBook"],
+  "documentation": "渠道",
+  "fields": [
+    {
+      "documentation": "渠道名称",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "渠道类别",
+      "fieldName": "category",
+      "fieldType": "ChannelCate",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SmallRedBook (小红书),ByteDance (抖音),MeiTuan (美团)"
+    },
+    {
+      "documentation": "比例",
+      "fieldName": "rate",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "props",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "渠道是否开放",
+      "fieldName": "open",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Channels",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "channels",
+      "relationshipName": "customer",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

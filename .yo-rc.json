@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "RedBook",
+    "clientFramework": "react",
+    "databaseType": "mongodb",
+    "devServerPort": 9060,
+    "entities": ["Channels", "Customer", "CstAccount", "CstJob", "JobResult", "JobOrder"],
+    "jhipsterVersion": "8.6.0",
+    "jwtSecretKey": "NTNlNjViZDM0NzFlN2VjNGJhY2Q5OWUxNjczMDAzNzdiOGQ5M2UwYmEzNDJmYzczZjQ3YWFhYWE4ZTM4NDcxMGE3MmMzOTM3NzYxMTM4MmRlZDRkMjFiNzAyOWQ4MzAzMDUwNzM2ODhiYmEzYjY1NjgxMTI1MDI2OTgzYzBhOGU=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1721232858000,
+    "nativeLanguage": "en",
+    "packageFolder": "com/laofansay/work",
+    "packageName": "com.laofansay.work",
+    "prodDatabaseType": "mongodb"
+  }
+}
