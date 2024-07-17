@@ -1,10 +1,13 @@
 package com.laofansay.work.service;
 
 import com.laofansay.work.domain.CstJob;
+import com.laofansay.work.domain.enumeration.JobStatus;
 import com.laofansay.work.repository.CstJobRepository;
+import java.util.List;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -114,5 +117,11 @@ public class CstJobService {
     public void delete(String id) {
         log.debug("Request to delete CstJob : {}", id);
         cstJobRepository.deleteById(id);
+    }
+
+    public List<CstJob> findWaitList(Integer row) {
+        CstJob job = new CstJob();
+        job.setStatus(JobStatus.READY);
+        return cstJobRepository.findAll(Example.of(job), Pageable.ofSize(row)).getContent();
     }
 }

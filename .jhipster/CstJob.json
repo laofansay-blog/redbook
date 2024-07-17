@@ -16,7 +16,7 @@
       "fieldName": "executeType",
       "fieldType": "ExecuteType",
       "fieldValidateRules": ["required"],
-      "fieldValues": "ONCE (行行一次),DAY (每次天执行)"
+      "fieldValues": "ONCE (扫行一次),DAY (每天执行)"
     },
     {
       "documentation": "任务类型",
