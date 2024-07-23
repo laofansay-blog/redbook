@@ -17,6 +17,7 @@
         <!-- lookup parent from repository -->
     </parent>
 
+
     <properties>
         <!--
             Build properties
@@ -71,7 +72,15 @@
         <sonar-maven-plugin.version>4.0.0.4121</sonar-maven-plugin.version>
         <spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
         <springdoc-openapi-starter-webmvc-api.version>2.5.0</springdoc-openapi-starter-webmvc-api.version>
+
     </properties>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
 
     <dependencyManagement>
         <dependencies>
@@ -86,6 +95,57 @@
     </dependencyManagement>
 
     <dependencies>
+
+
+<!--            <dependency>-->
+<!--                <groupId>com.sun.xml.ws</groupId>-->
+<!--                <artifactId>jaxws-rt</artifactId>-->
+<!--                <version>2.3.7</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>jakarta.xml.bind</groupId>-->
+<!--                <artifactId>jakarta.xml.bind-api</artifactId>-->
+<!--                <version>2.3.3</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.glassfish.jaxb</groupId>-->
+<!--                <artifactId>jaxb-runtime</artifactId>-->
+<!--                <version>2.3.8</version>-->
+<!--            </dependency>-->
+
+
+
+        <!-- JAXB API -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+        <!-- JAXB 实现 -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.dynamicreports</groupId>
+            <artifactId>dynamicreports-core</artifactId>
+            <version>6.12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>4.0.4</version>
+        </dependency>
+
         <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
